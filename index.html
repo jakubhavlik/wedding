@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <title>Markéta & Jakub</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
   </head>
   <h1>Markéta & Jakub</h1>
   <p>Srdečně Vás zveme na naši svatbu!</p>
@@ -11,4 +13,18 @@
     <li><a href="invitation.html">Pozvánka</a></li>
     <li><a href="svatba.ics">Přidej si do kalendáře</a></li>
   </ul>
+  <div id="map" style="width: 100%; height: 500px; margin-top: 150px;"></div>
+  <script>
+    const map = new maplibregl.Map({
+      style: "https://tiles.openfreemap.org/styles/liberty",
+      center: [15.3991931, 50.598235],
+      zoom: 12.5,
+      container: "map",
+    });
+    const popup = new maplibregl.Popup({ offset: 25 }).setText("Silverstone Living");
+    new maplibregl.Marker({ color: "#b71c1c" })
+      .setLngLat([15.3991931, 50.598235])
+      .setPopup(popup) // Attach the popup to the marker
+      .addTo(map);
+  </script>
 </html>
