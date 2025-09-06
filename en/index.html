@@ -3,26 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>Markéta & Jakub</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
   </head>
   <h1>Markéta & Jakub</h1>
   <div class="language-switcher">
-    <a href="index.html" class="flag-link">
-      <img src="flags/cz.png" alt="Česky" width="24" height="16" />
+    <a href="../index.html" class="flag-link">
+      <img src="../flags/cz.png" alt="Česky" width="24" height="16" />
     </a>
     <a href="en/index.html" class="flag-link">
-      <img src="flags/uk.png" alt="English" width="24" height="16" />
+      <img src="../flags/uk.png" alt="English" width="24" height="16" />
     </a>
   </div>
-  <p>Srdečně Vás zveme na naši svatbu!</p>
+  <p>"We warmly invite you to our wedding!"</p>
   <ul>
-    <li><a href="invitation.html">Pozvánka</a></li>
-    <li><a href="svatba.ics">Přidej si do kalendáře</a></li>
-    <li><a href="information.html">Informace pro hosty</a></li>
+    <li><a href="invitation.html">Invitation</a></li>
+    <li><a href="../svatba.ics">Add date to calendar</a></li>
+    <li><a href="information.html">Details for our guests</a></li>
   </ul>
-  <div id="map" style="width: 100%; height: 700px; margin-top: 150px"></div>
+  <div id="map" style="width: 100%; height: 700px; margin-top: 150px;"></div>
   <script>
     const map = new maplibregl.Map({
       style: "https://tiles.openfreemap.org/styles/liberty",
